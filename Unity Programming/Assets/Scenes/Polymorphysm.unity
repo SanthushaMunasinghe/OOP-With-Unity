@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 28389569}
   - component: {fileID: 28389571}
   m_Layer: 5
-  m_Name: Stand
+  m_Name: Sprint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 258723685}
   - component: {fileID: 258723684}
   m_Layer: 5
-  m_Name: SelectFarmer
+  m_Name: SelectSwardsman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,8 +329,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 739637993}
-        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+      - m_Target: {fileID: 739637995}
+        m_TargetAssemblyTypeName: SoldireManager, Assembly-CSharp
         m_MethodName: SelectCharcter
         m_Mode: 3
         m_Arguments:
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 417447760}
   - component: {fileID: 417447762}
   m_Layer: 0
-  m_Name: Fisherman
+  m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 417447757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a3f779507d15340a6a9068c42e0881, type: 3}
+  m_Script: {fileID: 11500000, guid: eb153d3388ec4ac42ade8c5c5d594ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &509565872
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 509565874}
   - component: {fileID: 509565876}
   m_Layer: 5
-  m_Name: Move
+  m_Name: Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,34 +607,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 739637994}
+  - component: {fileID: 739637996}
   - component: {fileID: 739637995}
-  - component: {fileID: 739637993}
   m_Layer: 0
-  m_Name: CharacterManager
+  m_Name: SoldireManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &739637993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739637992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558430138f9e33f40bb2e034806d6bc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Characters:
-  - {fileID: 1309803210}
-  - {fileID: 417447757}
-  cText: {fileID: 1129057313}
-  moveBtn: {fileID: 509565876}
-  standBtn: {fileID: 28389571}
-  actionBtn: {fileID: 859634440}
 --- !u!4 &739637994
 Transform:
   m_ObjectHideFlags: 0
@@ -659,7 +640,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 739637992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff06ce0e1357d74189db6af499def0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 094d400655e26a149a18b6784efd3763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soldires:
+  - {fileID: 1309803210}
+  - {fileID: 417447757}
+  cText: {fileID: 1129057313}
+  moveBtn: {fileID: 509565876}
+  standBtn: {fileID: 28389571}
+  acttack: {fileID: 859634440}
+--- !u!114 &739637996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739637992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c038b81d704428340af5fd52c034dff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &859634439
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 859634441}
   - component: {fileID: 859634440}
   m_Layer: 5
-  m_Name: Action
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 874380665}
   - component: {fileID: 874380664}
   m_Layer: 5
-  m_Name: SelectFisherman
+  m_Name: SelectArcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,8 +868,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 739637993}
-        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+      - m_Target: {fileID: 739637995}
+        m_TargetAssemblyTypeName: SoldireManager, Assembly-CSharp
         m_MethodName: SelectCharcter
         m_Mode: 3
         m_Arguments:
@@ -989,7 +989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: F
+  m_Text: Sm
 --- !u!222 &989698819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: M
+  m_Text: W
 --- !u!222 &1248818492
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1506,26 +1506,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1309803214}
   - component: {fileID: 1309803213}
-  - component: {fileID: 1309803211}
+  - component: {fileID: 1309803215}
   m_Layer: 0
-  m_Name: Farmer
+  m_Name: Swardsman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1309803211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309803210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dec3269d7179a99468f8d6a5310b2215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1309803213
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1593,6 +1581,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309803215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309803210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c2b96d055983a458ff5b9821a85bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673925817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,7 +1744,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fi
+  m_Text: A
 --- !u!222 &2137420204
 CanvasRenderer:
   m_ObjectHideFlags: 0
