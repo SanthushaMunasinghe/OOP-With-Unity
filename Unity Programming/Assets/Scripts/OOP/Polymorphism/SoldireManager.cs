@@ -15,10 +15,10 @@ public class SoldireManager : MonoBehaviour
 
     void Start()
     {
-        SelectCharcter(0);
+        SelectSoldire(0);
     }
 
-    public void SelectCharcter(int index)
+    public void SelectSoldire(int index)
     {
         selectedC = soldires[index];
         cText.text = selectedC.gameObject.name;
