@@ -11,3 +11,8 @@ public abstract class Turret : MonoBehaviour
 
     public abstract void Shoot();
 }
+
+public interface ITurret
+{
+    void Reload();
+}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrossbowTurret : Turret
+public class CrossbowTurret : Turret, ITurret
 {
     public void CrossbowAim()
     {
@@ -12,5 +12,10 @@ public class CrossbowTurret : Turret
     public override void Shoot()
     {
         Debug.Log("Shoot Arrows");
+    }
+
+    public void Reload()
+    {
+        Debug.Log("Crossbow Reload");
     }
 }
